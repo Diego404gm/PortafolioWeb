@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!--<script>
+        (function () {
+            if (localStorage.getItem("dark-mode") === "enabled") {
+                document.documentElement.classList.add("dark-mode");
+            }
+        })();
+    </script> *@-->
+    <link href="./css/dark-mode.css" rel="stylesheet" />
+    <link href="./css/curriculum.css" rel="stylesheet" />
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+</head>
+
+<body>
+
+    <header class="topnav">
+        
+        <div class="brand"> &lt;Nombre ApellidoPaterno ApellidoMaterno/&gt; </div>
+        
+        <div class="hamburger" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-links" id="nav-links">
+            <a href="#about">About</a>
+            <a href="#studies">Studies</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="nav-icons">
+            <a href="#" class="icon-link" id="darkModeToggle">
+                <i class="fas fa-sun" id="sun-icon"></i>
+                <i class="fas fa-moon" id="moon-icon" style="display:none;"></i>
+            </a>
+            <a href="#" class="icon-link" id="languageToggle">
+                <i class="fas fa-flag-usa" id="flag-icon"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <div class="content-portfolio">
+                <div class="content-wrapper">
+                    <img src="./img/mi foto.jpg" alt="Profile" class="profile-image" width="250" height="250">
+                    <div class="text-content">
+                       
+                        <p class="greeting" data-en="Hello, <span class='name'>I am Nombre</span>" data-es="Hola, <span class='name'>soy Nombre</span>">
+                            Hello, <span class="name">I am Nombre</span>
+                        </p>
+                        
+                        <p class="subtitle" data-en="Web Developer" data-es="Desarrollador Web">Web Developer</p>
+                        <p class="description"
+                           data-en="Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology."
+                           data-es="Aquí encontrarás más información sobre mí, lo que hago y mis habilidades actuales, principalmente en términos de programación y tecnología.">
+                            Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology.
+                        </p>
+                        <div class="profile-social-icons">
+                            <div class="icon-card">
+                                <a href="https://www.linkedin.com/in/diego-avila-9993b3310/" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                            <div class="icon-card">
+                                <a href="https://github.com/Diego404gm?tab=repositories" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <div class="icon-card">
+                                <a href="mailto:diegoavila1018@hotmail.com">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="aboutme-section">
+            <div id="about" class="content-title-aboutme">
+                <h5>About Me</h5>
+                <span class="underline"></span>
+            </div>
+            <div class="content-subtitle">
+                <p>Here you will find more information about me, what I do, and my current skills mostly in terms <br> of programming and technology.</p>
+            </div>
+            <div class="content-grid">
+                <div class="content-left">
+                    <h3 class="content-knowme">Get to know me</h3>
+                    <div class="content-details">
+                        <p class="content-details-info">I'm a Frontend Focused Web Developer building and managing the Front-end of Websites and Web Applications that leads to the success of the overall product. Check out some of my work in the Projects section.</p>
+                        <p class="content-details-info">I also like sharing content related to the stuff that I have learned over the years in Web Development so it can help other people of the Dev Community. Feel free to Connect or Follow me on my Linkedin and Instagram where I post useful content related to Web Development and Programming</p>
+                        <p class="content-details-info">I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.</p>
+                    </div>
+                </div>
+                <div class="content-right">
+                    <h3 class="content-skills">My Skills</h3>
+                    <div class="card-socials">
+                        <a href="#" class="socialContainer containerHtml">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+                                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M2.62891,2l2.08203,18l7.28711,2l7.28906,-2l2.08203,-18zM4.87109,4h14.25586l-1.66992,14.42969l-5.45703,1.49609l-5.45703,-1.49609zM7.00781,6l0.53711,6.33789h6.93555l-0.23633,2.75391l-2.2207,0.5l-2.26172,-0.49805l-0.08594,-1.01953h-1.98242l0.2207,2.62305l4.04688,1.28906l0.04101,0.01367l4.0918,-1.30273l0.54688,-6.43555h-7.28906l-0.18164,-2.17969h7.6543l0.17969,-2.08203z"></path></g></g>
+                            </svg>
+                        </a>
+                        <a href="#" class="socialContainer containerJs">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+                                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M24.007,45.419c-0.574,0 -1.143,-0.15 -1.646,-0.44l-5.24,-3.103c-0.783,-0.438 -0.401,-0.593 -0.143,-0.682c1.044,-0.365 1.255,-0.448 2.369,-1.081c0.117,-0.067 0.27,-0.043 0.39,0.028l4.026,2.389c0.145,0.079 0.352,0.079 0.486,0l15.697,-9.061c0.145,-0.083 0.24,-0.251 0.24,-0.424v-18.113c0,-0.181 -0.094,-0.342 -0.243,-0.432l-15.69,-9.054c-0.145,-0.086 -0.338,-0.086 -0.483,0l-15.688,9.053c-0.152,0.086 -0.249,0.255 -0.249,0.428v18.114c0,0.173 0.094,0.338 0.244,0.42l4.299,2.483c2.334,1.167 3.76,-0.208 3.76,-1.591v-17.877c0,-0.255 0.2,-0.452 0.456,-0.452h1.988c0.248,0 0.452,0.196 0.452,0.452v17.886c0,3.112 -1.697,4.9 -4.648,4.9c-0.908,0 -1.623,0 -3.619,-0.982l-4.118,-2.373c-1.018,-0.59 -1.647,-1.691 -1.647,-2.865v-18.114c0,-1.179 0.629,-2.279 1.646,-2.861l15.714,-9.065c0.994,-0.562 2.314,-0.562 3.301,0l15.694,9.069c1.012,0.585 1.645,1.682 1.645,2.861v18.114c0,1.175 -0.633,2.271 -1.646,2.861l-15.694,9.064c-0.503,0.291 -1.073,0.44 -1.654,0.44"></path><path d="M28.856,32.937c-6.868,0 -8.308,-3.153 -8.308,-5.797c0,-0.251 0.203,-0.452 0.455,-0.452h2.028c0.224,0 0.413,0.163 0.448,0.384c0.306,2.066 1.218,3.108 5.371,3.108c3.308,0 4.715,-0.747 4.715,-2.502c0,-1.01 -0.401,-1.76 -5.54,-2.263c-4.299,-0.424 -6.955,-1.371 -6.955,-4.809c0,-3.167 2.672,-5.053 7.147,-5.053c5.026,0 7.517,1.745 7.831,5.493c0.012,0.13 -0.035,0.255 -0.122,0.35c-0.086,0.09 -0.208,0.145 -0.334,0.145h-2.039c-0.212,0 -0.397,-0.149 -0.44,-0.354c-0.491,-2.173 -1.678,-2.868 -4.904,-2.868c-3.611,0 -4.031,1.257 -4.031,2.2c0,1.143 0.495,1.477 5.367,2.122c4.825,0.64 7.116,1.544 7.116,4.935c0,3.418 -2.853,5.379 -7.827,5.379"></path></g></g>
+                            </svg>
+                        </a>
+                        <a href="#" class="socialContainer containerCss">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+                                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M6,4l2,21l8,3l8,-3l2,-21zM9.33203,7h13.32031l-0.26172,3l-5.69531,3h2.42578h2.87891h0.12305l-0.51172,6.00781l0.01953,-0.00781l-0.27539,3l-5.35547,2l-5.36523,-2l-0.33008,-4h3.02148l0.15625,2.0332l2.51758,0.87109l2.52148,-0.85352l0.3457,-4.05078h-8.73633l-0.25781,-3l5.91016,-3h-6.17383z"></path></g></g>
+                            </svg>
+                        </a>
+                        <a href="#" class="socialContainer containerGit">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+                                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M44,24c0,8.96 -5.88,16.54 -14,19.08v-5.08c0,-1.71 -0.72,-3.24 -1.86,-4.34c5.24,-0.95 7.86,-4 7.86,-9.66c0,-2.45 -0.5,-4.39 -1.48,-5.9c0.44,-1.71 0.7,-4.14 -0.52,-6.1c-2.36,0 -4.01,1.39 -4.98,2.53c-1.45,-0.35 -3.12,-0.53 -5.02,-0.53c-1.8,0 -3.46,0.2 -4.94,0.61c-0.96,-1.15 -2.64,-2.61 -5.06,-2.61c-1.42,2.28 -0.84,4.74 -0.3,6.12c-1.08,1.51 -1.7,3.45 -1.7,5.88c0,5.66 2.62,8.71 7.86,9.66c-0.67,0.65 -1.19,1.44 -1.51,2.34h-2.35c-1.44,0 -2,-0.64 -2.77,-1.68c-0.77,-1.04 -1.6,-1.74 -2.59,-2.03c-0.53,-0.06 -0.89,0.37 -0.42,0.75c1.57,1.13 1.68,2.98 2.31,4.19c0.57,1.09 1.75,1.77 3.08,1.77h2.39v4.08c-8.12,-2.54 -14,-10.12 -14,-19.08c0,-11.05 8.95,-20 20,-20c11.05,0 20,8.95 20,20z"></path></g></g>
+                            </svg>
+                        </a>
+                    </div>
+                    <h3 class="content-knowledge">Knowledge</h3>
+                   
+                    <p class="content-details-info3">
+                        Conocimientos
+                    </p>
+                    
+                </div>
+            </div>
+        </section>
+        <div class="studies-section">
+            <div class="content-title">
+                <h5>STUDIES</h5>
+                <span class="underline"></span>
+            </div>
+
+            <div id="education-cards"></div>
+        </div>
+
+        
+        <section>
+            <div id="experience" class="content-title experience-section">
+                <h5>Experience</h5>
+                <span class="underline"></span>
+
+                <div class="timeline-container">
+                    <div class="timeline">
+                    </div>
+
+                   
+                    <div class="timeline-item right">
+
+                        <div class="timeline-marker"></div>
+
+                        <div class="card-container">
+                            <div class="card">
+                                <div class="card-front">
+                                    <h3>Empresa</h3>
+                                    <p><strong>Puesto:</strong> Puesto</p>
+                                    <p><strong>Fecha Inicio:</strong> FechaInicio</p>
+                                    <p><strong>Fecha Fin:</strong> FechaFin</p>
+                                </div>
+                                <div class="card-back">
+                                    <p><strong>Descripción:</strong> Descripcion</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <div class="content-title">
+                <h5>PROJECTS</h5>
+                <span class="underline"></span>
+            </div>
+
+            <div class="projects-container">
+                <!-- Card 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="~/img/gojo.jpg" alt="Proyecto 1">
+                    </div>
+                    <div class="project-content">
+                        <h3>Proyecto</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-btn">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="~/img/gojo.jpg" alt="Proyecto 2">
+                    </div>
+                    <div class="project-content">
+                        <h3>Proyecto</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-btn">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="~/img/gojo.jpg" alt="Proyecto 3">
+                    </div>
+                    <div class="project-content">
+                        <h3>Proyecto</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-btn">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="contact-section">
+                <div class="content-title">
+                    <h5>CONTACT</h5>
+                    <span class="underline"></span>
+                </div>
+
+                <div class="contact-section">
+                    <div class="contact-card">
+                        <h2 class="contact-card-title">Contacta Conmigo</h2>
+                        <div id="successMessage" style="display: none">
+                            <h3 style="color: #4CAF50; text-align: center; padding: 20px;">
+                                ¡Mensaje enviado con éxito!
+                            </h3>
+                        </div>
+                        <form class="contact-form" id="contactForm">
+                            <div class="contact-form-group">
+                                <input type="text" id="name" name="name" required placeholder=" " class="contact-form-input">
+                                <label for="name" class="contact-form-label">Nombre Completo</label>
+                            </div>
+                            <div class="contact-form-group">
+                                <input type="email" id="email" name="email" required placeholder=" " class="contact-form-input">
+                                <label for="email" class="contact-form-label">Correo Electrónico</label>
+                            </div>
+                            <div class="contact-form-group">
+                                <textarea id="message" name="message" required placeholder=" " class="contact-form-textarea"></textarea>
+                                <label for="message" class="contact-form-label">Mensaje</label>
+                            </div>
+                            <button type="submit" class="contact-submit-btn">Enviar Mensaje</button>
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/curriculum.js"></script>
+
+</body>
+</html>
+
