@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    
+
     <!--<script>
         (function () {
             if (localStorage.getItem("dark-mode") === "enabled") {
@@ -38,9 +38,9 @@
 <body>
 
     <header class="topnav">
-        
-        <div class="brand"> &lt;Nombreee ApellidoPaterno ApellidoMaterno/&gt; </div>
-        
+
+        <div class="brand"> &lt;Diego Avila Martinez/&gt; </div>
+
         <div class="hamburger" id="hamburger-menu">
             <span></span>
             <span></span>
@@ -71,11 +71,11 @@
                 <div class="content-wrapper">
                     <img src="./img/mi foto.jpg" alt="Profile" class="profile-image" width="250" height="250">
                     <div class="text-content">
-                       
+
                         <p class="greeting" data-en="Hello, <span class='name'>I am Nombre</span>" data-es="Hola, <span class='name'>soy Nombre</span>">
                             Hello, <span class="name">I am Nombre</span>
                         </p>
-                        
+
                         <p class="subtitle" data-en="Web Developer" data-es="Desarrollador Web">Web Developer</p>
                         <p class="description"
                            data-en="Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology."
@@ -146,24 +146,43 @@
                         </a>
                     </div>
                     <h3 class="content-knowledge">Knowledge</h3>
-                   
+
                     <p class="content-details-info3">
-                        Conocimientos
+                        Skills
                     </p>
-                    
+
                 </div>
             </div>
         </section>
         <div class="studies-section">
             <div class="content-title">
-                <h5>STUDIES</h5>
+                <h5 class="translate" data-key="studies">STUDIES</h5>
                 <span class="underline"></span>
             </div>
-
-            <div id="education-cards"></div>
+            <section class="education-cards">
+                <div class="education-card">
+                    <div class="card-content">
+                        <div class="image-container">
+                            <img src="./img/uanl.jpg" alt="Universidad logo">
+                        </div>
+                        <div class="info-container">
+                            <div class="vertical-line"></div>
+                            <div class="education-info">
+                                <div class="header-row">
+                                    <h3 class="university" data-key="university">Universidad Autónoma de Nuevo León</h3>
+                                    <span class="date" data-key="date">2020 - 2024</span>
+                                </div>
+                                <p class="faculty" data-key="faculty">FACPYA Facultad de Contaduría Pública y Administración</p>
+                                <p class="career" data-key="career">Licenciatura en Tecnologías de la Información</p>
+                                <p class="description-studies" data-key="description-studies">Descripción de los estudios realizados.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
 
-        
+
         <section>
             <div id="experience" class="content-title experience-section">
                 <h5>Experience</h5>
@@ -276,7 +295,7 @@
                 <div class="contact-section">
                     <div class="contact-card">
                         <h2 class="contact-card-title">Contacta Conmigo</h2>
-                        <div id="successMessage" style="display: none">
+                        <div id="successMessage" class="send-exit"style="display: none">
                             <h3 style="color: #4CAF50; text-align: center; padding: 20px;">
                                 ¡Mensaje enviado con éxito!
                             </h3>
