@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const flagIcon = document.getElementById("flag-icon");
     const translations = {
         en: {
-            // Textos existentes
+            // Sección inicio
             about: "About",
             studies: "Studies",
             experience: "Experience",
@@ -101,33 +101,34 @@ document.addEventListener("DOMContentLoaded", function () {
             subtitle: "Web Developer",
             description: "Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology.",
             aboutme: "About Me",
-            knowledge: "Knowledge",
-            knowledgeDetails: "Skills",
+            knowledge: "Knowledge",          
+            knowledgeDetails1: "Web Development: Experience in Full Stack development using JavaScript for frontend interactivity and C# / .NET Core MVC for backend business logic. Proficiency in HTML and CSS for structuring and designing responsive web interfaces.",
+            knowledgeDetails2: "Databases and Data Analysis: Knowledge of SQL Server and Oracle for database creation and management. Experience in Power BI for creating interactive dashboards and in Excel for data analysis and automation.",
+            knowledgeDetails3: "Tools and Technologies: Use of DataTables and SweetAlert for dynamic data management and interactive validations, AJAX for handling asynchronous requests, and GitHub for version control and collaborative project management.",  
 
-            // Nuevos textos
+            // Sección know me
             contentKnowme: "Get to know me",
             contentSkills: "My Skills",
-            contentDetails1: "I'm a Frontend Focused Web Developer building and managing the Front-end of Websites and Web Applications that leads to the success of the overall product. Check out some of my work in the Projects section.",
-            contentDetails2: "I also like sharing content related to the stuff that I have learned over the years in Web Development so it can help other people of the Dev Community. Feel free to Connect or Follow me on my Linkedin and Instagram where I post useful content related to Web Development and Programming",
-            contentDetails3: "I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.",
-
-            // Sección Studies
+            contentDetails1: "I'm passionate about web development, both Front-End and Back-End, which allows me to build complete and functional applications from scratch.I enjoy facing challenges, learning new technologies, and improving my skills every day. I like working on projects that are not only functional but also visually appealing and accessible to users.",
+            contentDetails2: "I have worked with technologies such as JavaScript, HTML, CSS, .NET Core, and SQL, developing applications with user authentication, structured databases, and interactive validations.",
+            contentDetails3: "Beyond programming, I enjoy learning new technologies and taking on challenges, always striving to improve my skills and stay up to date in the web development world. I am passionate about problem-solving and optimizing processes to enhance both user experience and code efficiency.",            
+            // Sección studies
             studiesTitle: "STUDIES",
             university: "Universidad Autónoma de Nuevo León",
             date: "2020 - 2024",
             faculty: "FACPYA Facultad de Contaduría Pública y Administración",
             career: "Licenciatura en Tecnologías de la Información",
-            descriptionStudies: "Description of the studies carried out.",
+            descriptionStudies: "During my studies in the field of Information Technology, I acquired knowledge in software development, databases, cybersecurity, and technology project management.",
 
-            // Sección Experience
+            // Sección experience
             experienceTitle: "Experience",
-            company: "Company",
-            position: "Position",
-            startDate: "Start Date",
-            endDate: "End Date",
-            jobDescription: "Description",
+            /*company: "Experience",*/
+            position: "Technologies",
+            startDate: "Date",
+            /*endDate: "End Date",*/
+            jobDescription: "I developed an interactive web portfolio with advanced features such as language switching (English/Spanish) and dark mode. I implemented a responsive and dynamic design using JavaScript for real-time translation and theme customization, improving accessibility and user experience.",
 
-            // Sección Contacto
+            // Sección contacto
             contactTitle: "Contact",
             contactWithMe: "Contact With Me",
             messageExit: "Message sent successfully!",
@@ -150,14 +151,17 @@ document.addEventListener("DOMContentLoaded", function () {
             description: "Aquí encontrarás más información sobre mí, lo que hago y mis habilidades actuales, principalmente en términos de programación y tecnología.",
             aboutme: "Acerca de mi",
             knowledge: "Conocimientos",
-            knowledgeDetails: "Habilidades",
+            knowledgeDetails1: "Desarrollo Web: Experiencia en desarrollo Full Stack utilizando JavaScript para la interactividad en el frontend y C# / .NET Core MVC para la lógica de negocio en el backend. Dominio de HTML y CSS para la estructuración y diseño de interfaces web responsivas.",
+            knowledgeDetails2: "Bases de Datos y Análisis de Datos: Manejo de SQL Server y Oracle para la creación y administración de bases de datos. Experiencia en Power BI para la creación de dashboards interactivos y en Excel para el análisis y automatización de datos.",
+            knowledgeDetails3: " Herramientas y Tecnologías: Uso de DataTables y SweetAlert para la gestión de datos dinámicos y validaciones interactivas, AJAX para el manejo de solicitudes asíncronas y GitHub para el control de versiones y gestión de proyectos colaborativos.",
+
 
             
             contentKnowme: "Conóceme",
             contentSkills: "Mis Habilidades",
-            contentDetails1: "Soy un Desarrollador Web enfocado en Frontend que construye y gestiona el Front-end de Sitios Web y Aplicaciones Web que conducen al éxito del producto en general. Echa un vistazo a algunos de mis trabajos en la sección de Proyectos.",
-            contentDetails2: "También me gusta compartir contenido relacionado con lo que he aprendido a lo largo de los años en Desarrollo Web para ayudar a otras personas de la Comunidad de Desarrolladores. Siéntete libre de Conectar o Seguirme en mi LinkedIn e Instagram donde publico contenido útil relacionado con Desarrollo Web y Programación",
-            contentDetails3: "Estoy abierto a oportunidades laborales donde pueda contribuir, aprender y crecer. Si tienes una buena oportunidad que coincida con mis habilidades y experiencia, no dudes en contactarme.",
+            contentDetails1: "Soy un apasionado del desarrollo web, tanto en el Front-End como en el Back-End, me gusta enfrentar desafíos, aprender nuevas tecnologías y mejorar mis habilidades cada día. Disfruto trabajar en proyectos que no solo sean funcionales, sino también atractivos y accesibles para los usuarios.",
+            contentDetails2: "He trabajado con tecnologías como JavaScript, HTML, CSS, .NET Core y SQL, desarrollando aplicaciones con autenticación de usuarios, bases de datos estructuradas y validaciones interactivas.",
+            contentDetails3: "Además de la programación, disfruto aprender nuevas tecnologías y enfrentar desafíos, siempre buscando mejorar mis habilidades y mantenerme actualizado en el mundo del desarrollo web. Me gusta la resolución de problemas y optimización de procesos para mejorar la experiencia del usuario y la eficiencia del código.",
 
             
             studiesTitle: "ESTUDIOS",
@@ -165,17 +169,17 @@ document.addEventListener("DOMContentLoaded", function () {
             date: "2020 - 2024",
             faculty: "FACPYA Facultad de Contaduría Pública y Administración",
             career: "Licenciatura en Tecnologías de la Información",
-            descriptionStudies: "Descripción de los estudios realizados.",
+            descriptionStudies: "Durante mi formación en la carrera de Tecnologías de la Información, adquirí conocimientos en desarrollo de software, bases de datos, seguridad informática y gestión de proyectos tecnológicos.",
 
             
             experienceTitle: "Experiencia",
-            company: "Empresa",
-            position: "Puesto",
-            startDate: "Fecha Inicio",
-            endDate: "Fecha Fin",
-            jobDescription: "Descripción",
+            /*company: "Empresa",*/
+            position: "Tecnologias ",
+            startDate: "Fecha",
+            /*endDate: "Fecha Fin",*/
+            jobDescription: "Desarrollé un portafolio web interactivo con funcionalidades avanzadas como cambio de idioma (en/es) y modo oscuro. Implementé un diseño responsivo y dinámico utilizando JavaScript para la traducción en tiempo real y la personalización del tema, mejorando la accesibilidad y experiencia del usuario. ",
 
-              // Sección Contacto
+              
             contactTitle: "Contacto",
             contactWithMe: "Contacta Conmigo",
             messageExit: "¡Mensaje enviado con éxito!",
@@ -202,8 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".content-title-aboutme h5").textContent = translations[currentLanguage].aboutme;
 
         document.querySelector(".content-knowledge").textContent = translations[currentLanguage].knowledge;
-        document.querySelector(".content-details-info3").textContent = translations[currentLanguage].knowledgeDetails;
-
+        
         
         document.querySelector(".content-subtitle p").textContent = translations[currentLanguage].description;
         document.querySelector(".content-knowme").textContent = translations[currentLanguage].contentKnowme;
@@ -214,6 +217,11 @@ document.addEventListener("DOMContentLoaded", function () {
         contentDetailsInfo[0].textContent = translations[currentLanguage].contentDetails1;
         contentDetailsInfo[1].textContent = translations[currentLanguage].contentDetails2;
         contentDetailsInfo[2].textContent = translations[currentLanguage].contentDetails3;
+
+        const contentDetailsInfo2 = document.querySelectorAll(".content-details-info3");
+        contentDetailsInfo2[0].textContent = translations[currentLanguage].knowledgeDetails1;
+        contentDetailsInfo2[1].textContent = translations[currentLanguage].knowledgeDetails2;
+        contentDetailsInfo2[2].textContent = translations[currentLanguage].knowledgeDetails3;
 
     
         document.querySelector(".translate[data-key='studies']").textContent = translations[currentLanguage].studiesTitle;
@@ -234,22 +242,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Obtener todos los labels de los campos del formulario
         const labels = document.querySelectorAll(".contact-form-label");
-
-        // Asignar traducciones a cada label según su posición
-        if (labels.length >= 3) { // Asegurarse de que existan los tres labels
+        
+        if (labels.length >= 3) { 
             labels[0].textContent = translations[currentLanguage].fullName;
             labels[1].textContent = translations[currentLanguage].email;
             labels[2].textContent = translations[currentLanguage].messageLabel;
         }
         
-
-        
+  
         const cardFronts = document.querySelectorAll(".card-front");
         cardFronts.forEach(card => {
             const companyTitle = card.querySelector("h3");
             const positionElement = card.querySelectorAll("p")[0];
             const startDateElement = card.querySelectorAll("p")[1];
-            const endDateElement = card.querySelectorAll("p")[2];
+            
 
             if (companyTitle.textContent === "Empresa" || companyTitle.textContent === "Company") {
                 companyTitle.textContent = translations[currentLanguage].company;
@@ -258,23 +264,18 @@ document.addEventListener("DOMContentLoaded", function () {
             if (positionElement) {
                 const positionStrong = positionElement.querySelector("strong");
                 if (positionStrong) {
-                    positionStrong.textContent = translations[currentLanguage].position + ":";
+                    positionStrong.textContent = translations[currentLanguage].position + ":HTML, CSS, JavaScript, .NET Core";
                 }
             }
 
             if (startDateElement) {
                 const startDateStrong = startDateElement.querySelector("strong");
                 if (startDateStrong) {
-                    startDateStrong.textContent = translations[currentLanguage].startDate + ":";
+                    startDateStrong.textContent = translations[currentLanguage].startDate + ":10/03/2025";
                 }
             }
 
-            if (endDateElement) {
-                const endDateStrong = endDateElement.querySelector("strong");
-                if (endDateStrong) {
-                    endDateStrong.textContent = translations[currentLanguage].endDate + ":";
-                }
-            }
+          
         });
 
        
@@ -284,12 +285,13 @@ document.addEventListener("DOMContentLoaded", function () {
             if (descriptionElement) {
                 const descriptionStrong = descriptionElement.querySelector("strong");
                 if (descriptionStrong) {
-                    descriptionStrong.textContent = translations[currentLanguage].jobDescription + ":";
+                    descriptionStrong.textContent = translations[currentLanguage].jobDescription + "";
                 }
             }
         });
 
-        // Cambiar el ícono de la bandera
+
+        
         if (currentLanguage === "en") {
             flagIcon.classList.remove("fa-flag");
             flagIcon.classList.add("fa-flag-usa");
@@ -415,8 +417,7 @@ document.querySelectorAll('.card').forEach(card => {
 //    gsap.from(".icon-card", { opacity: 0, duration: 1, scale: 0, stagger: 0.2, delay: 1 });
 //});
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Elementos de texto a animar
+document.addEventListener('DOMContentLoaded', function () {   
     const textElements = document.querySelectorAll(`
         h5,
         .content-subtitle p,
@@ -431,7 +432,6 @@ document.addEventListener('DOMContentLoaded', function () {
         .underline
     `);
 
-    // Cards y otros elementos a animar
     const cardElements = document.querySelectorAll(`
         .project-card,
         .timeline-item,
@@ -439,7 +439,6 @@ document.addEventListener('DOMContentLoaded', function () {
         .socialContainer
     `);
 
-    // Aplicar clase hidden a todos los elementos seleccionados
     textElements.forEach(element => {
         element.classList.add('hidden');
     });
@@ -448,7 +447,6 @@ document.addEventListener('DOMContentLoaded', function () {
         element.classList.add('hidden');
     });
 
-    // Crear el observador para detectar cuando los elementos son visibles
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -461,7 +459,6 @@ document.addEventListener('DOMContentLoaded', function () {
         rootMargin: '0px 0px -50px 0px'
     });
 
-    // Observar todos los elementos
     textElements.forEach(element => {
         observer.observe(element);
     });
@@ -470,13 +467,11 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(element);
     });
 
-    // Añadir delays especiales para los iconos de habilidades
     const socialIcons = document.querySelectorAll('.socialContainer');
     socialIcons.forEach((icon, index) => {
         icon.style.transitionDelay = `${0.2 + (index * 0.1)}s`;
     });
 
-    // Animación de los education cards si existen
     const educationCards = document.querySelectorAll('.education-card');
     educationCards.forEach((card, index) => {
         card.style.transitionDelay = `${0.2 + (index * 0.2)}s`;

@@ -447,13 +447,14 @@ body {
 }
 
 .content-details-info3 {
+    position: relative;
+    top: -85px;
     font-size: 17px;
     color: black;
     max-width: 42rem;
     line-height: 1.7;
-    margin-bottom: -80px;
+    margin-bottom: -79px;
     padding: 40px;
-    margin-top: -80px;
 }
 
 .content-years {
@@ -616,7 +617,7 @@ body {
 
 .card p {
     color: #333;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 /*Contact*/
