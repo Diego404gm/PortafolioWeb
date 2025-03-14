@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".contact-card-title").textContent = translations[currentLanguage].contactWithMe;
         document.querySelector(".contact-submit-btn").textContent = translations[currentLanguage].send;
 
-        // Obtener todos los labels de los campos del formulario
+        // Obtener todos los labels 
         const labels = document.querySelectorAll(".contact-form-label");
         
         if (labels.length >= 3) { 
