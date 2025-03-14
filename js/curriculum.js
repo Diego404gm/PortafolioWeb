@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
             position: "Tecnologias ",
             startDate: "Fecha",
             /*endDate: "Fecha Fin",*/
-            jobDescription: "Desarrollé un portafolio web interactivo con funcionalidades avanzadas como cambio de idioma (en/es) y modo oscuro. Implementé un diseño responsivo y dinámico utilizando JavaScript para la traducción en tiempo real y la personalización del tema, mejorando la accesibilidad y experiencia del usuario. ",
+            jobDescription: "Desarrollé un portafolio Web interactivo con funcionalidades avanzadas como cambio de idioma (en/es) y modo oscuro. Implementé un diseño responsivo y dinámico utilizando JavaScript para la traducción en tiempo real y la personalización del tema, mejorando la accesibilidad y experiencia del usuario. ",
 
               
             contactTitle: "Contacto",
