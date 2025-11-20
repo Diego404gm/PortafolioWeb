@@ -1,5 +1,4 @@
-﻿
-document.addEventListener("DOMContentLoaded", function () {
+﻿document.addEventListener("DOMContentLoaded", function () {
     cargarEstudios();
 });
 
@@ -18,7 +17,7 @@ function mostrarEstudios(educationData) {
     container.innerHTML = "";
     educationData.forEach(edu => {
         const card = document.createElement('div');
-        card.className = 'education-card hidden'; 
+        card.className = 'education-card hidden';
         card.innerHTML = `
         <div class="card-content">
             <div class="image-container">
@@ -58,271 +57,114 @@ function mostrarEstudios(educationData) {
     });
 }
 
-
+// DARK MODE
 document.addEventListener("DOMContentLoaded", function () {
     const darkModeToggle = document.getElementById("darkModeToggle");
-    const body = document.body;
     const sunIcon = document.getElementById("sun-icon");
     const moonIcon = document.getElementById("moon-icon");
+    const projectImg = document.getElementById("project-img");
 
-    if (localStorage.getItem("dark-mode") === "enabled") {
-        body.classList.add("dark-mode");
+    // Verificar estado inicial y actualizar iconos/imagen
+    if (document.documentElement.classList.contains("dark-mode")) {
         sunIcon.style.display = "none";
         moonIcon.style.display = "inline";
+        if (projectImg) projectImg.src = "./img/portfolio-dark.png";
+    } else {
+        sunIcon.style.display = "inline";
+        moonIcon.style.display = "none";
+        if (projectImg) projectImg.src = "./img/portfolio-light.png";
     }
 
+    // Toggle dark mode al hacer click
     darkModeToggle.addEventListener("click", (event) => {
         event.preventDefault();
-        body.classList.toggle("dark-mode");
+        document.documentElement.classList.toggle("dark-mode");
 
-        if (body.classList.contains("dark-mode")) {
+        if (document.documentElement.classList.contains("dark-mode")) {
             localStorage.setItem("dark-mode", "enabled");
             sunIcon.style.display = "none";
             moonIcon.style.display = "inline";
+            if (projectImg) projectImg.src = "./img/portfolio-dark.png";
         } else {
             localStorage.setItem("dark-mode", "disabled");
             sunIcon.style.display = "inline";
             moonIcon.style.display = "none";
+            if (projectImg) projectImg.src = "./img/portfolio-light.png";
         }
     });
 });
 
+// LANGUAGE TOGGLE - BEST PRACTICES
 document.addEventListener("DOMContentLoaded", function () {
     const languageToggle = document.getElementById("languageToggle");
     const flagIcon = document.getElementById("flag-icon");
-    const translations = {
-        en: {
-            // Sección inicio
-            about: "About",
-            studies: "Studies",
-            experience: "Experience",
-            contact: "Contact",
-            greeting: "Hello, <span class='name'>I am Diego</span>",
-            subtitle: "Web Developer",
-            description: "Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology.",
-            aboutme: "About Me",
-            knowledge: "Knowledge",          
-            knowledgeDetails1: "Web Development: Experience in Full Stack development using JavaScript for frontend interactivity and C# / .NET Core MVC for backend business logic. Proficiency in HTML and CSS for structuring and designing responsive web interfaces.",
-            knowledgeDetails2: "Databases and Data Analysis: Knowledge of SQL Server and Oracle for database creation and management. Experience in Power BI for creating interactive dashboards and in Excel for data analysis and automation.",
-            knowledgeDetails3: "Tools and Technologies: Use of DataTables and SweetAlert for dynamic data management and interactive validations, AJAX for handling asynchronous requests, and GitHub for version control and collaborative project management.",  
 
-            // Sección know me
-            contentKnowme: "Get to know me",
-            contentSkills: "My Skills",
-            contentDetails1: "I'm passionate about web development, both Front-End and Back-End, which allows me to build complete and functional applications from scratch.I enjoy facing challenges, learning new technologies, and improving my skills every day. I like working on projects that are not only functional but also visually appealing and accessible to users.",
-            contentDetails2: "I have worked with technologies such as JavaScript, HTML, CSS, .NET Core, and SQL, developing applications with user authentication, structured databases, and interactive validations.",
-            contentDetails3: "Beyond programming, I enjoy learning new technologies and taking on challenges, always striving to improve my skills and stay up to date in the web development world. I am passionate about problem-solving and optimizing processes to enhance both user experience and code efficiency.",            
-            // Sección studies
-            studiesTitle: "STUDIES",
-            university: "Universidad Autónoma de Nuevo León",
-            date: "2020 - 2024",
-            faculty: "FACPYA Facultad de Contaduría Pública y Administración",
-            career: "Licenciatura en Tecnologías de la Información",
-            descriptionStudies: "During my studies in the field of Information Technology, I acquired knowledge in software development, databases, cybersecurity, and technology project management.",
+    // Obtener idioma actual del atributo HTML (ya configurado por script inline)
+    let currentLanguage = document.documentElement.getAttribute('data-current-lang') || 'es';
 
-            // Sección experience
-            experienceTitle: "Experience",
-            /*company: "Experience",*/
-            position: "Technologies",
-            startDate: "Date",
-            /*endDate: "End Date",*/
-            jobDescription: "I developed an interactive web portfolio with advanced features such as language switching (English/Spanish) and dark mode. I implemented a responsive and dynamic design using JavaScript for real-time translation and theme customization, improving accessibility and user experience.",
+    // Aplicar idioma inicial (por si el script inline no corrió)
+    applyLanguage(currentLanguage);
+    updateFlagIcon(currentLanguage);
 
-            // Sección contacto
-            contactTitle: "Contact",
-            contactWithMe: "Contact With Me",
-            messageExit: "Message sent successfully!",
-            fullName: "Full Name",
-            email: "Email Address",
-            messageLabel:"Message",
-            send: "Send Message"
-
-
-
-        },
-        es: {
-            
-            about: "Acerca de mi",
-            studies: "Estudios",
-            experience: "Experiencia",
-            contact: "Contacto",
-            greeting: "Hola, <span class='name'>soy Diego</span>",
-            subtitle: "Desarrollador Web",
-            description: "Aquí encontrarás más información sobre mí, lo que hago y mis habilidades actuales, principalmente en términos de programación y tecnología.",
-            aboutme: "Acerca de mi",
-            knowledge: "Conocimientos",
-            knowledgeDetails1: "Desarrollo Web: Experiencia en desarrollo Full Stack utilizando JavaScript para la interactividad en el frontend y C# / .NET Core MVC para la lógica de negocio en el backend. Dominio de HTML y CSS para la estructuración y diseño de interfaces web responsivas.",
-            knowledgeDetails2: "Bases de Datos y Análisis de Datos: Manejo de SQL Server y Oracle para la creación y administración de bases de datos. Experiencia en Power BI para la creación de dashboards interactivos y en Excel para el análisis y automatización de datos.",
-            knowledgeDetails3: " Herramientas y Tecnologías: Uso de DataTables y SweetAlert para la gestión de datos dinámicos y validaciones interactivas, AJAX para el manejo de solicitudes asíncronas y GitHub para el control de versiones y gestión de proyectos colaborativos.",
-
-
-            
-            contentKnowme: "Conóceme",
-            contentSkills: "Mis Habilidades",
-            contentDetails1: "Soy un apasionado del desarrollo web, tanto en el Front-End como en el Back-End, me gusta enfrentar desafíos, aprender nuevas tecnologías y mejorar mis habilidades cada día. Disfruto trabajar en proyectos que no solo sean funcionales, sino también atractivos y accesibles para los usuarios.",
-            contentDetails2: "He trabajado con tecnologías como JavaScript, HTML, CSS, .NET Core y SQL, desarrollando aplicaciones con autenticación de usuarios, bases de datos estructuradas y validaciones interactivas.",
-            contentDetails3: "Además de la programación, disfruto aprender nuevas tecnologías y enfrentar desafíos, siempre buscando mejorar mis habilidades y mantenerme actualizado en el mundo del desarrollo web. Me gusta la resolución de problemas y optimización de procesos para mejorar la experiencia del usuario y la eficiencia del código.",
-
-            
-            studiesTitle: "ESTUDIOS",
-            university: "Universidad Autónoma de Nuevo León",
-            date: "2020 - 2024",
-            faculty: "FACPYA Facultad de Contaduría Pública y Administración",
-            career: "Licenciatura en Tecnologías de la Información",
-            descriptionStudies: "Durante mi formación en la carrera de Tecnologías de la Información, adquirí conocimientos en desarrollo de software, bases de datos, seguridad informática y gestión de proyectos tecnológicos.",
-
-            
-            experienceTitle: "Experiencia",
-            /*company: "Empresa",*/
-            position: "Tecnologias ",
-            startDate: "Fecha",
-            /*endDate: "Fecha Fin",*/
-            jobDescription: "Desarrollé un portafolio Web interactivo con funcionalidades avanzadas como cambio de idioma (en/es) y modo oscuro. Implementé un diseño responsivo y dinámico utilizando JavaScript para la traducción en tiempo real y la personalización del tema, mejorando la accesibilidad y experiencia del usuario. ",
-
-              
-            contactTitle: "Contacto",
-            contactWithMe: "Contacta Conmigo",
-            messageExit: "¡Mensaje enviado con éxito!",
-            fullName: "Nombre Completo",
-            email: "Correo Electronico",
-            messageLabel: "Mensaje",
-            send: "Enviar Mensaje"
-        }
-    };
-
-    let currentLanguage = localStorage.getItem("language") || "en";
-
-    function updateLanguageTexts() {
-      
-        document.querySelector("a[href='#about']").textContent = translations[currentLanguage].about;
-        document.querySelector("a[href='#studies']").textContent = translations[currentLanguage].studies;
-        document.querySelector("a[href='#experience']").textContent = translations[currentLanguage].experience;
-        document.querySelector("a[href='#contact']").textContent = translations[currentLanguage].contact;
-        document.querySelector(".greeting").innerHTML = translations[currentLanguage].greeting;
-        document.querySelector(".subtitle").textContent = translations[currentLanguage].subtitle;
-        document.querySelector(".description").textContent = translations[currentLanguage].description;
-
-       
-        document.querySelector(".content-title-aboutme h5").textContent = translations[currentLanguage].aboutme;
-
-        document.querySelector(".content-knowledge").textContent = translations[currentLanguage].knowledge;
-        
-        
-        document.querySelector(".content-subtitle p").textContent = translations[currentLanguage].description;
-        document.querySelector(".content-knowme").textContent = translations[currentLanguage].contentKnowme;
-        document.querySelector(".content-skills").textContent = translations[currentLanguage].contentSkills;
-
-        
-        const contentDetailsInfo = document.querySelectorAll(".content-details-info");
-        contentDetailsInfo[0].textContent = translations[currentLanguage].contentDetails1;
-        contentDetailsInfo[1].textContent = translations[currentLanguage].contentDetails2;
-        contentDetailsInfo[2].textContent = translations[currentLanguage].contentDetails3;
-
-        const contentDetailsInfo2 = document.querySelectorAll(".content-details-info3");
-        contentDetailsInfo2[0].textContent = translations[currentLanguage].knowledgeDetails1;
-        contentDetailsInfo2[1].textContent = translations[currentLanguage].knowledgeDetails2;
-        contentDetailsInfo2[2].textContent = translations[currentLanguage].knowledgeDetails3;
-
-    
-        document.querySelector(".translate[data-key='studies']").textContent = translations[currentLanguage].studiesTitle;
-        document.querySelector(".university[data-key='university']").textContent = translations[currentLanguage].university;
-        document.querySelector(".date[data-key='date']").textContent = translations[currentLanguage].date;
-        document.querySelector(".faculty[data-key='faculty']").textContent = translations[currentLanguage].faculty;
-        document.querySelector(".career[data-key='career']").textContent = translations[currentLanguage].career;
-        document.querySelector(".description-studies[data-key='description-studies']").textContent = translations[currentLanguage].descriptionStudies;
-
-
-      
-        document.querySelector(".experience-section h5").textContent = translations[currentLanguage].experienceTitle;
-
-        document.querySelector(".send-exit h3").textContent = translations[currentLanguage].messageExit;
-        document.querySelector(".contact-section h5").textContent = translations[currentLanguage].contactTitle;
-        document.querySelector(".contact-card-title").textContent = translations[currentLanguage].contactWithMe;
-        document.querySelector(".contact-submit-btn").textContent = translations[currentLanguage].send;
-
-        // Obtener todos los labels 
-        const labels = document.querySelectorAll(".contact-form-label");
-        
-        if (labels.length >= 3) { 
-            labels[0].textContent = translations[currentLanguage].fullName;
-            labels[1].textContent = translations[currentLanguage].email;
-            labels[2].textContent = translations[currentLanguage].messageLabel;
-        }
-        
-  
-        const cardFronts = document.querySelectorAll(".card-front");
-        cardFronts.forEach(card => {
-            const companyTitle = card.querySelector("h3");
-            const positionElement = card.querySelectorAll("p")[0];
-            const startDateElement = card.querySelectorAll("p")[1];
-            
-
-            if (companyTitle.textContent === "Empresa" || companyTitle.textContent === "Company") {
-                companyTitle.textContent = translations[currentLanguage].company;
-            }
-
-            if (positionElement) {
-                const positionStrong = positionElement.querySelector("strong");
-                if (positionStrong) {
-                    positionStrong.textContent = translations[currentLanguage].position + ":HTML, CSS, JavaScript, .NET Core";
-                }
-            }
-
-            if (startDateElement) {
-                const startDateStrong = startDateElement.querySelector("strong");
-                if (startDateStrong) {
-                    startDateStrong.textContent = translations[currentLanguage].startDate + ":10/03/2025";
-                }
-            }
-
-          
-        });
-
-       
-        const cardBacks = document.querySelectorAll(".card-back");
-        cardBacks.forEach(card => {
-            const descriptionElement = card.querySelector("p");
-            if (descriptionElement) {
-                const descriptionStrong = descriptionElement.querySelector("strong");
-                if (descriptionStrong) {
-                    descriptionStrong.textContent = translations[currentLanguage].jobDescription + "";
-                }
-            }
-        });
-
-
-        
-        if (currentLanguage === "en") {
-            flagIcon.classList.remove("fa-flag");
-            flagIcon.classList.add("fa-flag-usa");
-        } else {
-            flagIcon.classList.remove("fa-flag-usa");
-            flagIcon.classList.add("fa-flag");
-        }
-    }
-
-    updateLanguageTexts();
-
+    // Event listener para toggle
     languageToggle.addEventListener("click", function (event) {
         event.preventDefault();
-        currentLanguage = currentLanguage === "en" ? "es" : "en";
+
+        // Cambiar idioma
+        currentLanguage = currentLanguage === "es" ? "en" : "es";
+
+        // Aplicar cambios
+        applyLanguage(currentLanguage);
+        updateFlagIcon(currentLanguage);
+
+        // Guardar en localStorage
         localStorage.setItem("language", currentLanguage);
-        updateLanguageTexts();
+
+        // Actualizar atributos HTML
+        document.documentElement.setAttribute('lang', currentLanguage);
+        document.documentElement.setAttribute('data-current-lang', currentLanguage);
     });
+
+    /**
+     * Aplica el idioma a todos los elementos traducibles
+     * @param {string} lang - 'es' o 'en'
+     */
+    function applyLanguage(lang) {
+        // Seleccionar elementos con data-es Y data-en
+        const translatableElements = document.querySelectorAll('[data-es][data-en]');
+
+        translatableElements.forEach(element => {
+            const text = lang === 'en'
+                ? element.getAttribute('data-en')
+                : element.getAttribute('data-es');
+
+            if (text) {
+                element.innerHTML = text;
+            }
+        });
+
+        // Log para desarrollo (opcional, puedes quitarlo en producción)
+        console.log(`Idioma aplicado: ${lang === 'es' ? 'Español' : 'English'}`);
+    }
+
+    /**
+     * Actualiza el icono de la bandera según el idioma
+     * @param {string} language - 'es' o 'en'
+     */
+    function updateFlagIcon(language) {
+        if (language === "en") {
+            // Mostrando inglés, el botón debe mostrar español (para cambiar a español)
+            flagIcon.classList.remove("fa-flag-usa");
+            flagIcon.classList.add("fa-flag");
+        } else {
+            // Mostrando español, el botón debe mostrar inglés (para cambiar a inglés)
+            flagIcon.classList.remove("fa-flag");
+            flagIcon.classList.add("fa-flag-usa");
+        }
+    }
 });
 
-//document.querySelectorAll('input').forEach(input => {
-//    input.addEventListener('focus', function () {
-//        this.parentElement.classList.add('focused');
-//    });
-
-//    input.addEventListener('blur', function () {
-//        if (!this.value) {
-//            this.parentElement.classList.remove('focused');
-//        }
-//    });
-//});
-
+// HAMBURGER MENU
 document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.getElementById('hamburger-menu');
     const navLinks = document.getElementById('nav-links');
@@ -350,74 +192,74 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.getElementById("contactForm").addEventListener("submit", function (event) {
-    event.preventDefault();
+// CONTACT FORM
+document.addEventListener('DOMContentLoaded', function () {
+    const contactForm = document.getElementById("contactForm");
 
-    const form = this;
-    const formGroups = document.querySelectorAll('.contact-form-group');
-    const submitButton = document.querySelector('.contact-submit-btn');
-    const successMessage = document.getElementById("successMessage");
+    if (contactForm) {
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
 
-    console.log("Mensaje de éxito:", successMessage);
+            const form = this;
+            const formGroups = document.querySelectorAll('.contact-form-group');
+            const submitButton = document.querySelector('.contact-submit-btn');
+            const successMessage = document.getElementById("successMessage");
 
-    formGroups.forEach(group => {
-        group.style.display = 'none';
-    });
-    submitButton.style.display = 'none';
+            formGroups.forEach(group => {
+                group.style.display = 'none';
+            });
+            submitButton.style.display = 'none';
 
-    if (successMessage) {
-        successMessage.style.display = 'block';
-    } else {
-        console.error("No se encontró el elemento successMessage");
-    }
+            if (successMessage) {
+                successMessage.style.display = 'block';
+            }
 
-    let formData = new FormData(this);
-    fetch("https://formsubmit.co/ajax/diegoavila1018@gmail.com", {
-        method: "POST",
-        body: formData
-    })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                setTimeout(() => {
-                    if (successMessage) {
-                        successMessage.style.display = 'none';
+            let formData = new FormData(this);
+            fetch("https://formsubmit.co/ajax/diegoavila1018@gmail.com", {
+                method: "POST",
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        setTimeout(() => {
+                            if (successMessage) {
+                                successMessage.style.display = 'none';
+                            }
+                            formGroups.forEach(group => {
+                                group.style.display = 'block';
+                            });
+                            submitButton.style.display = 'block';
+                            form.reset();
+                        }, 10000);
                     }
+                })
+                .catch(error => {
+                    console.error("Error al enviar el formulario:", error);
                     formGroups.forEach(group => {
                         group.style.display = 'block';
                     });
                     submitButton.style.display = 'block';
-                    form.reset();
-                }, 10000);
-            }
-        })
-        .catch(error => {
-            console.error("Error al enviar el formulario:", error);
-            formGroups.forEach(group => {
-                group.style.display = 'block';
-            });
-            submitButton.style.display = 'block';
-            if (successMessage) {
-                successMessage.style.display = 'none';
-            }
-            alert("Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.");
+                    if (successMessage) {
+                        successMessage.style.display = 'none';
+                    }
+                    alert("Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.");
+                });
         });
+    }
 });
 
-document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('click', () => {
-        card.classList.toggle('flipped');
+// CARD FLIP
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('flipped');
+        });
     });
 });
 
-//document.addEventListener("DOMContentLoaded", () => {
-//    gsap.from(".main-container", { opacity: 0, duration: 1, y: -50, ease: "power2.out" });
-//    gsap.from(".profile-image", { opacity: 0, duration: 1, x: -50, delay: 0.3 });
-//    gsap.from(".greeting, .subtitle, .description", { opacity: 0, duration: 1, x: 50, stagger: 0.2, delay: 0.5 });
-//    gsap.from(".icon-card", { opacity: 0, duration: 1, scale: 0, stagger: 0.2, delay: 1 });
-//});
-
-document.addEventListener('DOMContentLoaded', function () {   
+// SCROLL ANIMATIONS
+document.addEventListener('DOMContentLoaded', function () {
     const textElements = document.querySelectorAll(`
         h5,
         .content-subtitle p,
@@ -478,4 +320,3 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(card);
     });
 });
-

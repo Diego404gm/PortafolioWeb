@@ -3,11 +3,13 @@
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
 }
+
 .dark-mode {
     background: linear-gradient(90deg, #f0f2f0 0%, #000c40 100%);
     color: #ffffff;
 }
 
+    /* ===== NAVEGACIÓN ===== */
     .dark-mode .topnav {
         box-shadow: 0px 4px 15px rgb(255 255 255 / 60%);
         background: #030617;
@@ -18,18 +20,35 @@
         color: white;
     }
 
-        .dark-mode .nav-links a:hover {
+        .dark-mode .nav-links a:hover,
+        .dark-mode .topnav .brand:hover,
+        .dark-mode .nav-icons .icon-link:hover {
             color: #3c6bb9;
+            cursor: pointer;
         }
 
     .dark-mode .topnav .brand:hover {
-        color: #3c6bb9;
         text-shadow: 0px 0px 5px #3c6bb9, 0px 0px 10px #3c6bb9, 0px 0px 15px #3c6bb9, 0px 0px 20px #3c6bb9, 0px 0px 30px #3c6bb9, 0px 0px 40px #3c6bb9, 0px 0px 50px #3c6bb9;
     }
 
-    .dark-mode .nav-icons .icon-link:hover {
-        color: #3c6bb9;
-        cursor: pointer;
+    .dark-mode .content-portfolio,
+    .dark-mode .projects-section {
+        background: #0e1127;
+    }
+
+    .dark-mode .studies-section {
+        background: #0e1127;
+    }
+
+    .dark-mode .aboutme-section,
+    .dark-mode .experience-section,
+    .dark-mode .contact-section {
+        background: #0d1426;
+    }
+
+    .dark-mode .contact-section {
+        min-height: 100vh;
+        padding-bottom: 50px;
     }
 
     .dark-mode .content-portfolio {
@@ -37,9 +56,16 @@
         justify-content: center;
         padding: 215px 25px 100px;
         margin-bottom: 0px;
-        background: #0e1127;
     }
 
+    /* ===== TÍTULOS ===== */
+    .dark-mode .content-title,
+    .dark-mode .content-title-aboutme,
+    .dark-mode .content-title-studies {
+        color: white;
+    }
+
+    /* ===== PERFIL ===== */
     .dark-mode .profile-image {
         width: 250px;
         height: 250px;
@@ -74,6 +100,7 @@
         color: #ffffff;
     }
 
+    /* ===== ICONOS SOCIALES ===== */
     .dark-mode .profile-social-icons .icon-card {
         background: white;
     }
@@ -88,31 +115,25 @@
         transition: color 0.3s ease;
     }
 
-
         .dark-mode .profile-social-icons a:hover {
             color: white;
         }
 
-    .dark-mode .content-title-aboutme {
-        color: white;
-    }
-
-    .dark-mode .aboutme-section {
-        background: #0d1426;
-    }
-
-    .dark-mode .content-title-studies {
-        color: #ffffff;
-    }
-
-    .dark-mode .content-knowme {
+    /* ===== CONTENIDO COMÚN ===== */
+    .dark-mode .content-knowme,
+    .dark-mode .content-skills,
+    .dark-mode .content-knowledge {
         color: #60a0f3;
     }
 
-    .dark-mode .content-skills {
-        color: #60a0f3;
+    .dark-mode .content-subtitle,
+    .dark-mode .content-details-info,
+    .dark-mode .content-details-info2,
+    .dark-mode .content-details-info3 {
+        color: #adadad;
     }
 
+    /* ===== CONTENEDORES SOCIALES ===== */
     .dark-mode .socialContainer {
         background-color: rgb(0 36 117);
     }
@@ -142,105 +163,41 @@
         transition-duration: .3s;
     }
 
-    .dark-mode .content-knowledge {
-        color: #60a0f3;
-    }
-
-    .dark-mode .content-subtitle {
-        color: #adadad;
-    }
-
-    .dark-mode .content-details-info {
-        color: #adadad;
-    }
-
-    .dark-mode .content-details-info2 {
-        color: #adadad;
-    }
-
-    .dark-mode .content-details-info3 {
-        color: #adadad;
-    }
-
-    .dark-mode .studies-section {
-        background: #0e1127;
-    }
-
-    .dark-mode .education-card {
-        background: #03172b;
-       /* #0b1c2d;*/
-        border: 3px solid white;
-    }
-
-    .dark-mode .content-title {
-        color: white;
-        background: #0d1029;
-    }
-
-    .dark-mode .underline {
-        background-color: #004eff;
-    }
-
-    .dark-mode .timeline {
-        background-color: #004eff;
-    }
-
-    .dark-mode .timeline-circle {
-        background-color: #004eff;
-    }
-
-    .dark-mode .timeline-marker {
-        background-color: #004eff;
-    }
-
+    /* ===== TIMELINE ===== */
+    .dark-mode .underline,
+    .dark-mode .timeline,
+    .dark-mode .timeline-circle,
+    .dark-mode .timeline-marker,
     .dark-mode .timeline-marker-right {
         background-color: #004eff;
     }
 
-    /*.dark-mode .card {
-        background-color: #f5f3ff;
-        border: 3px solid #3e81f1;
-        box-shadow: 0 0 15px #3e81f1, 0 0 30px rgba(62, 129, 241, 0.5);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* ===== TARJETAS DE EDUCACIÓN ===== */
+    .dark-mode .education-card {
+        background: #03172b;
+        border: 3px solid white;
     }
 
-        .dark-mode .card:hover {
-            transform: rotate(3deg) scale(1.05);
-            box-shadow: 0 0 20px #3e81f1, 0 0 40px rgba(62, 129, 241, 0.7);
-        }
-
-
-        .dark-mode .card h3 {
-            color: black;
-            margin-bottom: 10px;
-            font-size: 20px;
-        }
-
-        .dark-mode .card p {
-            color: black;
-            font-size: 18px;
-        }*/
+    /* ===== TARJETAS GIRATORIAS ===== */
     .dark-mode .card-container {
         perspective: 1000px;
         width: 400px;
         height: 250px;
     }
 
+    .dark-mode .card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+        cursor: pointer;
+    }
 
-.dark-mode .card {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
-    cursor: pointer;
-}
-
-
-.dark-mode .card:hover {
-    transform: rotateY(180deg);
-    box-shadow: none;
-}
+        .dark-mode .card:hover {
+            transform: rotateY(180deg);
+            box-shadow: none;
+        }
 
     .dark-mode .card-front,
     .dark-mode .card-back {
@@ -259,37 +216,27 @@
         align-items: center;
     }
 
-/* Cara frontal */
-.dark-mode .card-front {
-    z-index: 2;
-}
-
-.dark-mode .card-back {
-    transform: rotateY(180deg);
-    background-color: #fff0e6;
-}
-
-
-.dark-mode .card h3 {
-    color: #4b0082;
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-
-.dark-mode .card p {
-    color: #333;
-    font-size: 18px;
-}
-
-}
-    .dark-mode .experience-section {
-        background-color: #0d1426;
+    .dark-mode .card-front {
+        z-index: 2;
     }
 
-    .dark-mode .projects-section {
-        background: #0e1127;
+    .dark-mode .card-back {
+        transform: rotateY(180deg);
+        background-color: #fff0e6;
     }
 
+    .dark-mode .card h3 {
+        color: #4b0082;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .dark-mode .card p {
+        color: #333;
+        font-size: 16px;
+    }
+
+    /* ===== PROYECTOS ===== */
     .dark-mode .project-card {
         background: white;
         border: none;
@@ -316,12 +263,7 @@
             background-color: #141fa1;
         }
 
-    .dark-mode .contact-section {
-        background: #0d1426;
-        min-height: 100vh;
-        padding-bottom: 50px;
-    }
-
+    /* ===== CONTACTO ===== */
     .dark-mode .contact-card-title {
         color: black;
     }
@@ -366,6 +308,7 @@
             box-shadow: 0 0 0 2px rgba(255, 172, 21, 0.2);
         }
 
+/* ===== MEDIA QUERIES ===== */
 @media screen and (max-width: 767px) {
     html, body {
         max-width: 100%;
@@ -465,12 +408,8 @@
         top: 0px;
     }
 
-    .dark-mode .content-title-aboutme {
-        font-size: 30px;
-    }
-
     .dark-mode .content-details-info,
-    .dark-mode .content-details-info2
+    .dark-mode .content-details-info2,
     .dark-mode .content-details-info3 {
         font-size: 15px;
         padding: 20px;
@@ -491,12 +430,10 @@
         line-height: 1.6;
     }
 
-
     .dark-mode .content-knowme {
         position: relative !important;
         bottom: 5px !important;
         left: -20px !important;
-        font-size: !important;
     }
 
     .dark-mode .content-details-info3 {
@@ -554,7 +491,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-
     .dark-mode .content-wrapper {
         flex-direction: column;
         text-align: center;
@@ -585,10 +521,7 @@
         padding: 20px;
     }
 
-    .dark-mode .timeline-marker {
-        display: none;
-    }
-
+    .dark-mode .timeline-marker,
     .dark-mode .timeline-circle {
         display: none;
     }
@@ -602,7 +535,6 @@
         width: 90%;
         max-width: 500px;
     }
-
 
     .dark-mode .education-card {
         width: 100%;
@@ -635,7 +567,6 @@
     }
 }
 
-
 @media screen and (max-width: 480px) {
     .dark-mode .nav-icons {
         display: flex;
@@ -665,29 +596,26 @@
         padding: 10px;
     }
 
-    .dark-mode .timeline-marker {
-        width: 20px;
-        height: 20px;
-        background-color: #ff7600;
-        border-radius: 50%;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        box-shadow: 0 0 8px rgb(255 134 9 / 60%);
-        z-index: 2;
-    }
-
+    .dark-mode .timeline-marker,
     .dark-mode .timeline-marker-right {
         width: 20px;
         height: 20px;
         background-color: #ff7600;
         border-radius: 50%;
         position: absolute;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 8px rgb(255 134 9 / 60%);
+        z-index: 2;
+    }
+
+    .dark-mode .timeline-marker {
+        left: 50%;
+    }
+
+    .dark-mode .timeline-marker-right {
         left: 47%;
         top: 2%;
-        transform: translate(-50%, -50%);
         box-shadow: 0 0 8px rgba(75, 0, 130, 0.6);
-        z-index: 2;
     }
 
     .dark-mode .timeline-item {
@@ -703,9 +631,8 @@
     .dark-mode .timeline-marker {
         position: absolute;
         top: 2%;
-        left: 53%
+        left: 53%;
     }
-
 
     .dark-mode .timeline-item {
         display: flex;
@@ -746,7 +673,6 @@
             font-size: 20px;
         }
 }
-
 
 @media screen and (min-width: 1440px) {
     html, body {

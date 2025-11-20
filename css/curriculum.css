@@ -106,7 +106,9 @@ body {
     min-height: 450px;
 }
 
-
+[data-es][data-en] {
+    transition: opacity 0.2s ease;
+}
 .profile-image {
     width: 250px;
     height: 250px;
@@ -617,7 +619,7 @@ body {
 
 .card p {
     color: #333;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /*Contact*/
@@ -879,7 +881,7 @@ body {
 }
 
     .project-image img {
-        width: 100%;
+        width: 110%;
         height: 100%;
         object-fit: cover;
         transition: transform 0.3s ease;
@@ -890,10 +892,11 @@ body {
 }
 
 .project-content {
-    padding: 20px;
+    padding: 10px 20px 20px;
 }
 
     .project-content h3 {
+        margin-top: 0px;
         color: #333;
         margin-bottom: 10px;
         font-size: 1.5rem;
@@ -912,19 +915,21 @@ body {
 }
 
 .project-btn {
+    margin-top: 24px;
     padding: 8px 20px;
     background-color: #31302e;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+
 }
 
     .project-btn:hover {
         background-color: black;
     }
 
-
+    /*MENU PARA MOVILES*/
 .hamburger {
     display: none;
     flex-direction: column;
@@ -1058,6 +1063,7 @@ body {
         font-size: 30px;
         padding: 15px 5px 0;
         top: 0px;
+
     }
 
     .content-title-aboutme {
